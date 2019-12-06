@@ -53,3 +53,14 @@ func Publish(queueName string, data interface{})error{
 	})
 	return err
 }
+//func PublishError(queueName string, data interface{},handlers ...HandlerFunc)error{
+//	dataJson,_:=json.Marshal(data)
+//
+//	err := rabbitMqChannel.Publish(constant.QueueNameError, "", false,false, amqp.Publishing{
+//		ContentType: "application/json",
+//		Body:        dataJson,
+//		Timestamp:    time.Now(),
+//		Headers:amqp.Table{"queueName":queueName},
+//	})
+//	return err
+//}
