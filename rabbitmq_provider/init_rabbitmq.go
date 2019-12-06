@@ -8,6 +8,7 @@ import (
 )
 
 var queueNames = []string{
+	constant.QueueNameError,
 	constant.QueueNameShop,
 	constant.QueueShopConfigShippingFee,
 }
