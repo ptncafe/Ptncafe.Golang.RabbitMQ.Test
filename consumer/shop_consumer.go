@@ -16,11 +16,11 @@ func ShopConsumer(connection string) error{
 		shopData := model.StoreDto{}
 		_ = json.Unmarshal(*data, &shopData)
 		log.Printf("ShopConsumer %v",spew.Sdump(shopData))
-		time.Sleep(1 * time.Second)
+		time.Sleep(200 * time.Millisecond)
 		return nil
 	})
 
-	err := NewConsumer(connection,constant.QueueNameShop,5, handler)
+	_,err := NewConsumer(connection,constant.QueueNameShop,5, handler)
 	if err != nil {
 		return errors.Wrap(err, "ShopConsumer")
 	}

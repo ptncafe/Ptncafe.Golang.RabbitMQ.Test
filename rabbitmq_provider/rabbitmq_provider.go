@@ -26,6 +26,7 @@ func InitConnectionRabbitMq(connectionString string) (*amqp.Channel ,error){
 		log.Fatalf("InitConnectionRabbitMq %+v" , errors.Wrap(err,"InitConnectionRabbitMq Channel") )
 		return nil,err
 	}
+
 	return rabbitMqChannel,nil
 }
 
