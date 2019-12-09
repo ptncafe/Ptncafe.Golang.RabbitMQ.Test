@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8911c577-47e6-48ce-93ef-fb9829d04739" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/consumer/common_consumer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer/common_consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/common_consumer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/shop_consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/shop_consumer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rabbitmq_provider/rabbitmq_provider.go" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq_provider/rabbitmq_provider.go" afterDir="false" />
     </list>
@@ -90,7 +90,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
