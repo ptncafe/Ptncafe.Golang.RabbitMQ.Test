@@ -33,9 +33,6 @@ func InitConnectionRabbitMq(connectionString string) (*amqp.Channel ,error){
 func RabbitMqChannel() (*amqp.Channel,error){
 	return rabbitMqChannel,nil
 }
-
-
-
 func GetRabbitMqChannel(connectionString string)(*amqp.Channel,error){
 	rabbitMqConnection, err := amqp.Dial(connectionString)
 	if err != nil {

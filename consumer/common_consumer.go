@@ -12,11 +12,13 @@ type HandlerConsumer func(*[]byte) error
 
 type ConmonConsumer struct {
 	rabbitMqConnection *amqp.Connection
+	queueName string
 }
 //Qos koh chạy, phải gắn 1 connecion, nhiều channel
 func NewConsumer(amqpURI string, queueName string, refetchCount int,handler HandlerConsumer)  (*ConmonConsumer,error) {
 	var conmonConsumer = ConmonConsumer{
 		rabbitMqConnection: nil,
+		queueName:queueName,
 	}
 	rabbitMqConnection, err := amqp.Dial(amqpURI)
 	//defer rabbitMqConnection.Close()
