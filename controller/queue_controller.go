@@ -19,7 +19,15 @@ func QueueController(ctx *gin.Context){
 		ShopStatus: 2,
 		UpdatedDate: time.Now(),
 		}
-	err := rabbitmq_provider.Publish(constant.QueueNameShop , storeDto)
+	clientRabbitMq,err:= rabbitmq_provider.NewRabbitMqClient(constant.RabbitMqConnectionString, true)
+	if err!= nil {
+		log.Print(errors.Wrap(err,"QueueController"))
+		ctx.JSON(500, gin.H{
+			"error": fmt.Sprintf("QueueController %v", err),
+		})
+		return
+	}
+	err = clientRabbitMq.Publish(constant.QueueNameShop , storeDto)
 	if err!= nil {
 		log.Print(errors.Wrap(err,"QueueController"))
 		ctx.JSON(500, gin.H{

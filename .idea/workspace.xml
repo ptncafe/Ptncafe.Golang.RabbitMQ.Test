@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8911c577-47e6-48ce-93ef-fb9829d04739" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/rabbitmq_provider/rabbitmq_client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq_provider/rabbitmq_client_interface.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/common_consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/common_consumer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/shop_consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/shop_consumer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq_provider/rabbitmq_provider.go" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq_provider/rabbitmq_provider.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/queue_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/queue_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq_provider/init_rabbitmq.go" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq_provider/init_rabbitmq.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq_provider/rabbitmq_provider.go" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +41,12 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.go" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rabbitmq_provider" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Github\Ptncafe.Golang.RabbitMQ.Test\rabbitmq_provider" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -101,5 +111,16 @@
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <proxy>direct</proxy>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/controller/queue_controller.go</url>
+          <line>2</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -14,11 +14,18 @@ var queueNames = []string{
 }
 
 // InitRabbitMq mind set là exchange và queue sẽ dùng tên, 1 exchange và 1 queue
-func InitRabbitMq(channel *amqp.Channel) error{
-
+func RegisterQueue() error{
+	rabbitMqClient, err := NewRabbitMqClient(constant.RabbitMqConnectionString, true)
+	if err !=nil {
+		panic(err)
+	}
+	rabbitMqChannel,err :=rabbitMqClient.GetChannel(true)
+	if err !=nil {
+		panic(err)
+	}
 	for _, name := range  queueNames{
-		_ = InitExchange(channel, name)
-		_ = InitQueue(channel,name)
+		_ = InitExchange(rabbitMqChannel, name)
+		_ = InitQueue(rabbitMqChannel,name)
 		//return err
 	}
 	return nil

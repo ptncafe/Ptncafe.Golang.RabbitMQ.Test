@@ -8,13 +8,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+var rabbitMqClient rabbitmq_provider.IRabbitMqClient
 func main() {
-	channelRabbitMq, err := rabbitmq_provider.InitConnectionRabbitMq(constant.RabbitMqConnectionString)
-	///defer channelRabbitMq.Close()
-	if err !=nil {
-		panic(err)
-	}
-	err = rabbitmq_provider.InitRabbitMq(channelRabbitMq)
+
+	err := rabbitmq_provider.RegisterQueue()
 	if err !=nil {
 		panic(err)
 	}
